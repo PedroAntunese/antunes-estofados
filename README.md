@@ -29,6 +29,16 @@ Itens marcados com `CONFIRMAR` em `business.ts` precisam ser validados com a loj
 
 Prefira JPG/WebP com até ~1600px de largura e no máximo ~300 KB cada.
 
-## Deploy (futuro)
+## Publicação (GitHub Pages)
 
-O conteúdo de `dist/` pode ser publicado em qualquer hospedagem estática (Netlify, Vercel, Cloudflare Pages, GitHub Pages).
+O site está no ar em **https://pedroantunese.github.io/antunes-estofados/**.
+
+- Todo `git push` na branch `main` publica uma nova versão automaticamente
+  (workflow `.github/workflows/deploy.yml`). Leva cerca de 1 minuto.
+- Para publicar de novo sem mudar nada: aba **Actions** do repositório →
+  "Deploy no GitHub Pages" → **Run workflow**.
+- O GitHub Pages gratuito exige repositório **público**: se o repositório voltar
+  a ser privado, o site sai do ar.
+- O Vite usa `base: './'` (caminhos relativos), então o mesmo build funciona no
+  Pages e localmente. Se um dia usar um domínio próprio (ex.: antunesestofados.com.br),
+  nada precisa mudar no build.
